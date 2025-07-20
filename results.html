@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <video autoplay muted loop class="video-background">
+      <source src="./image/2.mp4" type="video/mp4" />
+      مرورگر شما از ویدیو پشتیبانی نمی‌کند.
+    </video>
+
+    <div class="container">
+      <div class="results-box">
+        <h1>نتایج شما</h1>
+        <div class="result-card">
+          <span class="result-icon">✅</span>
+          <p>پاسخ‌های درست: <span id="correct"></span></p>
+        </div>
+        <div class="result-card">
+          <span class="result-icon">❌</span>
+          <p>پاسخ‌های غلط: <span id="wrong"></span></p>
+        </div>
+        <button onclick="restartQuiz()">دوباره شروع کن</button>
+      </div>
+    </div>
+
+    <script src="./js/results.js"></script>
+  </body>
+</html>

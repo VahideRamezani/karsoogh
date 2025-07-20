@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Novamind puzzle</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="quiz-box">
+        <h1 id="question">سوال معما اینجا نمایش داده می‌شود</h1>
+        <div id="answer-container" class="answer-container">
+          <!-- جای خالی برای حروف جواب -->
+        </div>
+        <div id="puzzle-container" class="puzzle-container">
+          <!-- مربع‌های حروف اینجا نمایش داده می‌شوند -->
+        </div>
+        <div id="options-container" class="options-container">
+          <!-- گزینه‌ها اینجا نمایش داده می‌شوند -->
+        </div>
+        <button id="submit-btn" onclick="checkAnswer()">ارسال پاسخ</button>
+      </div>
+    </div>
+    <script src="./js/quiz.js"></script>
+  </body>
+</html>

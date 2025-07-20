@@ -1,0 +1,512 @@
+/* استایل پایه */
+body {
+  font-family: "Vazir", sans-serif;
+  color: #f1f2f6;
+  background: radial-gradient(circle, #333333, #000000);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  direction: rtl;
+}
+
+.container {
+  text-align: center;
+}
+
+.container p {
+  font-size: 1.3rem;
+}
+
+/* استایل باکس‌ها */
+.welcome-box,
+.quiz-box,
+.results-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* انیمیشن fadeIn */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* استایل دکمه‌ها */
+button {
+  background: linear-gradient(135deg, #ff6f61 0%, #ff9a9e 100%);
+  color: #fff;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 111, 97, 0.4);
+  margin-top: 1.5rem;
+  font-family: "Vazir", sans-serif;
+}
+
+button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(255, 111, 97, 0.6);
+}
+
+header {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 20px;
+  font-size: 1.5rem;
+}
+
+main {
+  padding: 20px;
+}
+
+footer {
+  background-color: #2f3542;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* استایل سوال */
+#question {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+#question .fas {
+  color: #ff6b6b;
+  margin-right: 10px;
+}
+
+/* استایل گزینه‌ها */
+#options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-bottom: 20px;
+}
+
+.option {
+  padding: 15px;
+  font-size: 1rem;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.option:hover {
+  background-color: #ff4757;
+}
+
+/* استایل درگ‌اند‌دراپ */
+#answer-container {
+  display: flex;
+  gap: 11px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.answer-slot {
+  width: 40px;
+  height: 40px;
+  border: 2px dashed #ff6b6b;
+  background-color: #f1f2f6;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #ff6b6b;
+}
+
+#puzzle-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.puzzle-piece {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ff6b6b;
+  background-color: #f1f2f6;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #ff6b6b;
+  cursor: grab;
+  transition: background-color 0.3s ease;
+}
+
+.puzzle-piece:hover {
+  background-color: #dfe4ea;
+}
+
+/* استایل دکمه ارسال */
+#submit-btn {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#submit-btn :hover {
+  background-color: #fb4d4d;
+}
+
+/* رسپانسیو برای موبایل و تبلت */
+@media (max-width: 768px) {
+  #question {
+    font-size: 1rem;
+  }
+
+  .option {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .answer-slot,
+  .puzzle-piece {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  #submit-btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #question {
+    font-size: 0.9rem;
+  }
+
+  .option {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+
+  .answer-slot,
+  .puzzle-piece {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+
+  #submit-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+/* استایل کارت‌های نتایج */
+
+.results-box {
+  background: radial-gradient(circle, #333333, #000000);
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.5);
+  animation: glow 2s infinite alternate, slideIn 1s ease-out;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.results-box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 0, 0, 0.2),
+    rgba(139, 0, 0, 0.2)
+  );
+  transform: rotate(45deg);
+  animation: rotateBackground 10s linear infinite;
+  z-index: -1;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 20px #ff6b6b;
+  }
+
+  100% {
+    box-shadow: 0 0 40px #f55050, 0 0 60px #792020;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotateBackground {
+  0% {
+    transform: rotate(45deg);
+  }
+
+  100% {
+    transform: rotate(405deg);
+  }
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 10px rgba(243, 47, 47, 0.8);
+  animation: textGlow 2s infinite alternate;
+}
+
+@keyframes textGlow {
+  0% {
+    text-shadow: 0 0 10px #ff6b6b(73, 3, 3, 0.8);
+  }
+
+  100% {
+    text-shadow: 0 0 20px #fa4848cf(91, 2, 2), 0 0 30px rgba(66, 4, 4, 0.8);
+  }
+}
+
+.result-card {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 1.5s ease-in;
+  border: 1px solid #2c0202;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.result-icon {
+  font-size: 1.5rem;
+  margin-left: 10px;
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+button {
+  background: #ff6b6b;
+  color: #fff;
+
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  animation: pulse 2s infinite;
+}
+
+button:hover {
+  background: #f03a3a;
+  color: #dfe4ea;
+  transform: scale(1.1);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #f73838(255, 0, 0, 0.4);
+  }
+
+  70% {
+    box-shadow: 0 0 0 15px rgba(255, 0, 0, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+  }
+}
+
+/* ریسپانسیو بودن */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .results-box {
+    padding: 20px;
+  }
+
+  .result-card {
+    padding: 10px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}
+
+/* انیمیشن bounce برای پاسخ‌های صحیح */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.correct {
+  animation: bounce 0.5s;
+}
+
+/* تم تاریک */
+body.dark-mode {
+  background: #333;
+  color: #fff;
+}
+
+/* افکت پارالاکس */
+.parallax {
+  background-image: url("background.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* استایل برای دستگاه‌های موبایل */
+@media (max-width: 768px) {
+  .welcome-box,
+  .quiz-box,
+  .results-box {
+    padding: 1rem;
+  }
+
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .puzzle-piece,
+  .answer-slot {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+/* استایل آیکون‌ها */
+
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* ویدیو تمام صفحه را پوشش می‌دهد */
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding-top: 20%;
+}
+
+/* برای دستگاه‌های با عرض کم (موبایل) */
+@media (max-width: 768px) {
+  .content {
+    padding-top: 50%;
+  }
+}
+
+/* پس‌زمینه ویدیویی */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

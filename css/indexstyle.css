@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.6;
+  background-color: #ffffff;
+  color: #333;
+  direction: rtl;
+  font-family: "Vazir", sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  color: #120758;
+  font-family: "Farnaz", sans-serif;
+  font-weight: bold;
+  margin-left: -30px;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex: 1;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #120758;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #ff6f61;
+}
+
+.login-btn {
+  padding: 8px 20px;
+  background-color: #fb5d4f;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #e65b50;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(255, 111, 97, 0.5);
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.hero-text {
+  flex: 1 1 50%;
+  padding: 20px;
+}
+
+.hero-text h1 {
+  font-size: 3.1rem;
+  margin-right: 12px;
+  color: #120758;
+}
+
+.hero-text p {
+  margin: 16px 0;
+  margin-right: 12px;
+  font-size: 1.7rem;
+  color: #1e1b1b;
+}
+
+.hero-text .btn {
+  display: inline-block;
+  padding: 13px 22px;
+  background-color: #ff6f61;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  margin-right: 15px;
+}
+
+.hero-text .btn:hover {
+  background-color: #e65b50;
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(255, 111, 97, 0.5);
+}
+
+.hero-image {
+  flex: 1 1 50%;
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-image img:hover {
+  transform: rotateY(200deg) rotateX(10deg);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
