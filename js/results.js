@@ -11,3 +11,7 @@ function restartQuiz() {
 }
 
 window.onload = loadResults;
+
+function exit() {
+  window.location.href = "index.html";
+}

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Result</title>
+    <title>Results</title>
     <link rel="stylesheet" href="./css/styles.css" />
     <link
       href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css"
@@ -14,21 +14,22 @@
   <body>
     <video autoplay muted loop class="video-background">
       <source src="./image/2.mp4" type="video/mp4" />
-      مرورگر شما از ویدیو پشتیبانی نمی‌کند.
+      Your browser does not support the video tag.
     </video>
 
     <div class="container">
       <div class="results-box">
-        <h1>نتایج شما</h1>
+        <h1>Your Results</h1>
         <div class="result-card">
           <span class="result-icon">✅</span>
-          <p>پاسخ‌های درست: <span id="correct"></span></p>
+          <p>Correct Answers: <span id="correct"></span></p>
         </div>
         <div class="result-card">
           <span class="result-icon">❌</span>
-          <p>پاسخ‌های غلط: <span id="wrong"></span></p>
+          <p>Wrong Answers: <span id="wrong"></span></p>
         </div>
-        <button onclick="restartQuiz()">دوباره شروع کن</button>
+        <button onclick="restartQuiz()" style="margin: 5px;">Restart Quiz</button>
+        <button onclick="exit()" style="margin: 5px;">Exit</button>
       </div>
     </div>
 
