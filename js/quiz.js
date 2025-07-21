@@ -5,95 +5,89 @@ let wrongAnswers = 0;
 const questions = [
     {
         level: 1,
-        question: " کاووس فرمانده‌ی یک سفینه فضایی است که در حال سفر به سیاره‌ای ناشناخته است. سیستم ناوبری سفینه به‌طور غیرمنتظره‌ای خراب می‌شود و کاووس باید یکی از دو مسیر خطرناک را انتخاب کند: یکی به سیاره‌ای با منابع بی‌نهایت و خطرات مرگبار، دیگری به یک سیاره سرد و بی‌حاصل. زمان محدودی دارد و تصمیم درست می‌تواند آینده‌ی کل سفینه را رقم بزند.  <br>کاووس برای انتخاب بهترین مسیر باید از کدام مهارت استفاده کند؟",
-        answer: "تصمیمگیری",
+        question: "Kavous is the commander of a spaceship traveling to an unknown planet. The spaceship's navigation system unexpectedly breaks down, and Kavous must choose between two dangerous routes: one to a planet with infinite resources but deadly dangers, and the other to a cold and barren planet. He has limited time, and the right decision can determine the future of the entire spaceship. <br> Which skill should Kavous use to choose the best path?",
+        answer: "DecisionMaking",
         type: "drag-drop",
         icon: "fas fa-rocket"
     },
     {
         level: 2,
-        question: "لیا یک هکر آینده‌نگر است که می‌تواند آینده را پیش‌بینی کند، اما روزی در دنیای دیجیتال دچار یک اتفاق غیرمنتظره می‌شود: ویروسی قدرتمند به سیستم او حمله کرده و داده‌های مهمی را قفل کرده است. او باید به سرعت سیستم خود را بازسازی کند و الگوریتم‌های جدیدی برای مبارزه با این تهدید طراحی کند.<br> لیا برای مقابله با بحران به وجود آمده و بازسازی سریع سیستم باید از کدام مهارت استفاده کند؟",
-        answer: "انعطافپذیری",
+        question: "Lia is a futuristic hacker who can predict the future, but one day, an unexpected event occurs in the digital world: a powerful virus attacks her system and locks important data. She must quickly rebuild her system and design new algorithms to fight this threat.<br> Which skill should Lia use to handle this crisis and quickly rebuild her system?",
+        answer: "Flexibility",
         type: "drag-drop",
         icon: "fas fa-laptop-code"
     },
     {
         level: 3,
-        question: " مکس و ریکو دو جستجوگر دیجیتال در دنیای سایبری هستند که برای پیدا کردن یک کد مخفی به اعماق اینترنت رفته‌اند. در این مسیر، هر کدام اطلاعات متفاوتی دارند و هیچ‌کدام بدون همکاری با دیگری نمی‌توانند به هدف برسند. اما در مسیر آنها، هیچ‌کدام نمی‌خواهد نظر طرف مقابل را قبول کند و تنش‌هایی میان آن‌ها به وجود آمده است.<br> مکس و ریکو برای دستیابی به کد مخفی و موفقیت باید از کدام مهارت استفاده کنند؟",
-        options: ["همکاری", "تصمیم‌گیری", "انعطاف‌پذیری"],
-        correctAnswer: "همکاری",
+        question: "Max and Rico are two digital explorers in the cyber world searching for a secret code. Each has different information and neither can reach the goal without cooperating with the other. However, neither wants to accept the other's opinion, causing tensions.<br> Which skill should Max and Rico use to obtain the secret code and succeed?",
+        options: ["Collaboration", "DecisionMaking", "Flexibility"],
+        correctAnswer: "Collaboration",
         type: "multiple-choice",
         icon: "fas fa-search"
     },
     {
         level: 4,
-        question: "هانا مهندس رباتیک است که قرار است یک ربات باهوش بسازد که می‌تواند در شرایط بحرانی به کمک انسان‌ها بیاید. اما او فقط ۲۴ ساعت زمان دارد تا ربات را به اتمام برساند و مشکلات مختلفی از جمله نقص در قطعات ربات و مشکل در کدنویسی در پیش دارد. هانا باید همه چیز را به‌طور مؤثر مدیریت کند تا پروژه را به موقع تکمیل کند.<br> هانا برای اتمام پروژه در زمان محدود باید از کدام مهارت استفاده کند؟",
-
-        answer: "مدیریتزمان",
+        question: "Hanna is a robotics engineer who must build a smart robot that can help humans in critical situations. She has only 24 hours to finish the robot, facing issues like defective parts and coding problems. Hanna must manage everything efficiently to complete the project on time.<br> Which skill should Hanna use to complete the project within the limited time?",
+        answer: "TimeManagement",
         type: "drag-drop",
         icon: "fas fa-robot"
     },
     {
         level: 5,
-        question:"   آریا فرمانده‌ی تیمی است که در دنیای مجازی مسئول کنترل و امنیت داده‌هاست. یک شب، هکرهایی وارد سیستم‌های حیاتی می‌شوند و داده‌های حساس را سرقت می‌کنند. آریا باید مسئولیت کامل بازیابی اطلاعات و شناسایی هکرها را بر عهده گیرد و از یک بحران بزرگ جلوگیری کند.<br> آریا برای رسیدگی به این بحران و حل مشکل امنیتی باید از کدام مهارت استفاده کند؟",
-        answer: "مسئولیتپذیری",
+        question: "Arya is the commander of a team responsible for data control and security in the virtual world. One night, hackers infiltrate vital systems and steal sensitive data. Arya must take full responsibility for recovering information and identifying the hackers to prevent a major crisis.<br> Which skill should Arya use to handle this crisis and solve the security problem?",
+        answer: "Responsibility",
         type: "drag-drop",
         icon: "fas fa-shield-alt"
     },
     {
         level: 6,
-        question: " سارا تحلیلگر داده‌های کلان است که با مجموعه‌ای از اطلاعات پیچیده و به هم ریخته روبروست. او باید این داده‌ها را به‌گونه‌ای تجزیه و تحلیل کند که برای دیگر اعضای تیم قابل فهم باشد. تیم او نیاز به گزارش واضح و قوی دارد تا بتوانند تصمیمات مهم بگیرند. اما یکی از اعضای تیم تمام اطلاعات را به شکلی مبهم می‌فرستد و سارا باید ارتباطات بهتری برقرار کند.<br> سارا برای بهبود ارتباطات و انتقال درست اطلاعات باید از کدام مهارت استفاده کند؟",
-        options: ["ارتباط مؤثر", "تفکر انتقادی", "مدیریت استرس"],
-        correctAnswer: "ارتباطمؤثر",
+        question: "Sara is a big data analyst dealing with complex and disorganized information. She must analyze the data so the team members can understand it clearly. However, one member sends ambiguous information and Sara needs to improve communication.<br> Which skill should Sara use to enhance communication and correctly transfer information?",
+        options: ["EffectiveCommunication", "CriticalThinking", "StressManagement"],
+        correctAnswer: "EffectiveCommunication",
         type: "multiple-choice",
         icon: "fas fa-chart-line"
     },
     {
         level: 7,
-        question: " کای رهبر یک تیم نخبه ضدتروریسم دیجیتال است که باید یک حمله سایبری بزرگ را دفع کند. در این ماموریت، اعضای تیم هر کدام در بخش‌های مختلف تخصص دارند، اما هیچ‌کدام نمی‌دانند کجا باید دست به کار شوند. کای باید تمام تیم را هماهنگ کند و هدایت کند تا بدون تلفات، ماموریت را به پایان برسانند.<br> کای برای هدایت تیم ضدتروریسم دیجیتال باید از کدام مهارت استفاده کند؟",
-
-        answer: "رهبری",
+        question: "Kai is the leader of an elite digital counter-terrorism team who must stop a major cyberattack. Team members specialize in different fields but don't know where to act. Kai must coordinate and guide the team to complete the mission without casualties.<br> Which skill should Kai use to lead the counter-terrorism team?",
+        answer: "Leadership",
         type: "drag-drop",
         icon: "fas fa-users"
     },
     {
         level: 8,
-        question: " تای یک محقق برجسته در زمینه واقعیت افزوده است. در پروژه‌ای جدید، دو تیم با هم دچار اختلافات جدی شده‌اند: تیم اول به شدت اصرار دارد که تجربه‌ی کاربری ساده باشد و تیم دوم می‌خواهد جلوه‌های بصری پیچیده‌تر و جذاب‌تری اضافه کند. تای باید این تعارض را حل کند تا پروژه به نتیجه برسد.<br>تای برای حل این تعارض بین تیم‌ها باید از کدام مهارت استفاده کند؟",
-
-        answer: "حلتعارض",
+        question: "Tai is a leading researcher in augmented reality. In a new project, two teams have serious conflicts: one insists on a simple user experience, and the other wants more complex and attractive visual effects. Tai must resolve this conflict so the project succeeds.<br> Which skill should Tai use to solve the conflict between the teams?",
+        answer: "ConflictResolution",
         type: "drag-drop",
         icon: "fas fa-puzzle-piece"
     },
     {
         level: 9,
-        question: "زیلا طراح واقعیت مجازی است که در حال ساخت یک دنیای دیجیتال جدید است. اما با یک چالش بزرگ روبرو می‌شود: هیچ راه‌حل بدیهی برای ترکیب همه عناصر در دنیای مجازی وجود ندارد. زیلا باید خلاقانه فکر کند تا محیطی بسازد که کاربران از آن لذت ببرند و تجربه‌ای فراموش‌نشدنی داشته باشند.<br> زیلا برای طراحی محیط مجازی نوآورانه باید از کدام مهارت استفاده کند؟",
-        options: ["خلاقیت", "نوآوری", "تفکر انتقادی"],
-        correctAnswer: "خلاقیت",
+        question: "Zila is a virtual reality designer creating a new digital world but faces a big challenge: there's no obvious way to combine all elements in the virtual world. Zila must think creatively to build an environment users will enjoy and have an unforgettable experience.<br> Which skill should Zila use to design an innovative virtual environment?",
+        options: ["Creativity", "Innovation", "CriticalThinking"],
+        correctAnswer: "Creativity",
         type: "multiple-choice",
         icon: "fas fa-paint-brush"
     },
-
     {
         level: 10,
-        question: " آریا در حال رهبری پروژه‌ای بزرگ برای ساخت ربات‌های هوشمند است. با نزدیک شدن به مهلت تحویل، استرس زیادی به تیم وارد شده و اعضای تیم با هم هماهنگ نمی‌شوند. آریا باید با ایجاد یک جو آرامش‌بخش و تمرکز بیشتر، تیم را از استرس بیرون بیاورد و پروژه را با موفقیت به پایان برساند. آریا برای کاهش استرس و مدیریت آن در تیم باید از کدام مهارت استفاده کند؟",
-
-        answer: "مدیریتاسترس",
+        question: "Arya is leading a major project to build smart robots. As the deadline approaches, the team is under a lot of stress and members aren't coordinating well. Arya must create a calming atmosphere and focus the team to successfully complete the project.<br> Which skill should Arya use to reduce and manage stress within the team?",
+        answer: "StressManagement",
         type: "drag-drop",
         icon: "fas fa-hourglass"
     },
     {
         level: 11,
-        question: " مینا مشاور دیجیتال است که به شرکت‌ها کمک می‌کند تا استراتژی‌های آنلاین خود را بهینه کنند. تیم او اخیراً از انگیزه پایین برخوردار شده و نتایج پروژه‌ها رو به کاهش است. مینا باید با استفاده از روش‌های نوآورانه،انرژی را دوباره در تیم خود ایجاد کند. مینا برای انرژی در تیم خود باید از کدام مهارت استفاده کند؟",
-
-        answer: "انگیزه",
+        question: "Mina is a digital consultant who helps companies optimize their online strategies. Recently, her team has had low motivation and declining project results. Mina must use innovative methods to re-energize her team.<br> Which skill should Mina use to boost team motivation?",
+        answer: "Motivation",
         type: "drag-drop",
         icon: "fas fa-lightbulb"
     },
     {
         level: 12,
-        question: " فیلیکس مدیر تحقیقاتی یک شرکت پیشرفته در زمینه هوش مصنوعی است. تیم او به تازگی داده‌های عظیمی را جمع‌آوری کرده که برای بهبود الگوریتم‌های هوش مصنوعی استفاده می‌شود. اما برخی داده‌ها به نظر متناقض هستند. فیلیکس باید به دقت داده‌ها را بررسی کرده و با تفکر مشکل را حل کند. <br>فیلیکس برای تحلیل داده‌های متناقض و رسیدن به نتایج درست باید از کدام مهارت استفاده کند؟",
-        options: ["تفکر انتقادی", "حل مسئله پیچیده", "پیش‌بینی و تحلیل آینده"],
-        correctAnswer: "تفکرانتقادی",
+        question: "Felix is a research manager at an advanced AI company. His team has collected massive data to improve AI algorithms, but some data seems contradictory. Felix must carefully analyze the data and solve the problem with critical thinking.<br> Which skill should Felix use to analyze contradictory data and reach accurate conclusions?",
+        options: ["CriticalThinking", "ComplexProblemSolving", "FuturePredictionAndAnalysis"],
+        correctAnswer: "CriticalThinking",
         type: "multiple-choice",
         icon: "fas fa-brain"
     }
@@ -111,7 +105,7 @@ function loadQuestion() {
     optionsContainer.innerHTML = '';
 
     if (question.type === "multiple-choice") {
-        question.options.forEach((option, index) => {
+        question.options.forEach((option) => {
             const button = document.createElement('button');
             button.textContent = option;
             button.classList.add('option');
@@ -140,7 +134,7 @@ function loadQuestion() {
         }
 
         const shuffledLetters = shuffleArray([...question.answer]);
-        shuffledLetters.forEach((letter, index) => {
+        shuffledLetters.forEach((letter) => {
             const piece = document.createElement('div');
             piece.textContent = letter;
             piece.classList.add('puzzle-piece');
