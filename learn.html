@@ -42,12 +42,12 @@
         color: #120758;
         font-family: "Farnaz", sans-serif;
         font-weight: bold;
-        margin-left: -30px;
+        margin-left: 30px;
       }
 
       header nav {
         display: flex;
-        gap: 20px;
+        gap: 40px;
         justify-content: center;
         flex: 1;
       }
@@ -152,16 +152,18 @@
         color: #ff6f61;
       }
 
-      .skill-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease-out, padding 0.5s ease-out;
-      }
+.skill-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  padding: 0;
+}
 
-      .skill.active .skill-content {
-        max-height: 200px;
-        padding: 10px 0;
-      }
+.skill.active .skill-content {
+  max-height: 500px;
+  padding: 10px 0;
+}
+
 
       @media (max-width: 768px) {
         header nav {
